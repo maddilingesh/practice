@@ -1,56 +1,22 @@
+<!DOCTYPE html>
 <html>
-	
-	<title>Facebook Style Homepage Design using HTML and CSS</title>
-	<head>
-		<link type="text/css" rel="stylesheet" href="style.css" />
-		<meta name="Description" content="Facebook Style Homepage Design with Login Form registration for using html and CSS"/>
+<body>
 
+<h1>My First Google Map</h1>
 
-	</head>
-	<body>
-		<div class="fb-header-base">
-		</div>
-		<div class="fb-header">
-			<div id="img1" class="fb-header"><img src="facebook.png" /></div>
-			<div id="form1" class="fb-header">Email or Phone<br>
-			<input placeholder="Email" type="mail" name="name" /><br>
-			<input type="checkbox" />keep me logged in</div>
-			
-			<div id="form2" class="fb-header">Password<br>
-			<input placeholder="Password" type="password" name="password" /><br>
-			Forgotten your password?
-			</div>
-			</div>
-		</div>
-		<input type="submit" class="submit1" value="login" />
-		<div class="fb-body">
-			<div id="intro1" class="fb-body">Facebook helps you connect and share with the <br>
-			people in your life.</div>
-			<div id="intro2" class="fb-body">Create an account</div>
-			<div id="img2" class="fb-body"><img src="world.png" /></div>
-			<div id="intro3" class="fb-body">It's free and always will be.</div>
-			<div id="form3" class="fb-body">
-				<input placeholder="First Name" type="text" id="namebox" name="name1" />
-				<input placeholder="Last Name" type="text" id="namebox"  /> <br>
-				<input placeholder="Emai" type="text" id="mailbox" /><br>
-				<input placeholder="Re-enter email" type="text" id="mailbox"  /><br>
-				<input placeholder="Password" type="password" id="mailbox"  /><br>
-				<input type="date" id="namebox"  /><br><br>
-				<input type="radio" id="r-b" name="sex" value="male" />Male
-				<input type="radio" id="r-b" name="sex" value="female" />Female<br><br>
-				<p id="intro4">By clicking Create an account, you agree to our Terms and that 
-				you have read our Data Policy, including our Cookie Use.</p>
-				<input type="submit" class="button2" value="Create an account" />
-				<br><hr>
-				<p id="intro5">Create a Page for a celebrity, band or business.</p>
-				
-			</div>
-			
-		</div>
-		<div class="fb-body-footer">
-				<div id="fb-body-footer-base" class="fb-body-footer">English (UK)<br><hr>
-				Sign Up	Log In	&copy; www.coderglass.com &nbsp;&nbsp; Design by Varun Singh</div>
-			</div>
-	</body>
-	
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+</body>
 </html>
